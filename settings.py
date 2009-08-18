@@ -2,6 +2,7 @@
 
 import sys
 import os.path
+from django.utils.translation import ugettext_lazy as _
 
 sys.path.append('/home/jcb/learngest/web/apps/')
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -86,4 +87,26 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'learning',
+    'coaching',
 )
+
+AUTHENTICATION_BACKENDS = (
+    'coaching.auth.CustomUserModelBackend',
+)
+
+CUSTOM_USER_MODEL = 'coaching.Utilisateur'
+
+LISTE_LANGUES = (
+        ('fr', _('French')),
+        ('en', _('English')),
+        ('zh-cn', _('Simplified Chinese')),
+)
+
+LISTE_TYPES = (
+        ('htm', 'HTML'),
+        ('swf', 'Flash movie'),
+        ('pdf', 'Portable Document Format'),
+        ('doc', 'MS Word document'),
+        ('xls', 'MS Excel document'),
+)
+
