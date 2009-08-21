@@ -9,13 +9,13 @@
 <div id="content-main">
 <form method="post" id="login-form">
   <div class="form-row">
-    <label for="id_email">{% trans 'Email:' %}</label> <input type="text" name="email" id="id_email" />
+	<label for="id_{{ form.username.name }}">{{ form.username.label }}</label> {{ form.username }} {{ form.errors.username }}
   </div>
   <div class="form-row">
-    <label for="id_password">{% trans 'Password:' %}</label> <input type="password" name="password" id="id_password" />
+    <label for="id_{{ form.password.name }}">{{ form.password.label }}</label> {{ form.password }} {{ form.errors.password }}
   </div>
   <div class="form-row">
-    <label for="id_remember">{% trans 'Password:' %}</label> <input checked="checked" type="checkbox" name="remember" id="id_remember" />
+	<label for="id_{{ form.remember.name }}">{{ form.remember.label }}</label> {{ form.remember }} {{ form.errors.remember }}
   </div>
   <div class="submit-row">
     <label>&nbsp;</label><input type="submit" value="Ok" />
