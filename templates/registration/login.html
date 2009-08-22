@@ -1,7 +1,14 @@
 {% extends "base_site.html" %}
 {% load i18n %}
 
-{% block breadcrumb %}Login form{% endblock breadcrumb %}
+{% block extrastyle %}{% load adminmedia %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% admin_media_prefix %}css/login.css" />{% endblock %}
+
+{% block bodyclass %}login{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
 {% block content %}
 {% if error_message %}
 <p class="errornote">{{ error_message }}</p>
@@ -18,12 +25,14 @@
 	<label for="id_{{ form.remember.name }}">{{ form.remember.label }}</label> {{ form.remember }} {{ form.errors.remember }}
   </div>
   <div class="submit-row">
-    <label>&nbsp;</label><input type="submit" value="Ok" />
+    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}"  />
   </div>
+  <p>
+  </p>
   <p><a href="/lostpw/">{% trans "Help, I lost my password" %}</a></p>
 </form>
 
 <script type="text/javascript">
-document.getElementById('id_email').focus()
+document.getElementById('id_username').focus()
 </script>
 {% endblock content %}
