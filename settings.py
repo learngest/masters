@@ -74,6 +74,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_email_auth.middleware.EmailAuthMiddleware',
 )
 
 ROOT_URLCONF = 'masters.urls'
@@ -91,13 +92,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'auth',
+    'django_email_auth',
     'learning',
     'coaching',
 )
 
 AUTHENTICATION_BACKENDS = (
-    'coaching.auth.CustomUserModelBackend',
+    'django_email_auth.backends.EmailBackend',
 )
 
 CUSTOM_USER_MODEL = 'coaching.Utilisateur'
