@@ -650,6 +650,9 @@ table#change-history tbody th {
 #footer {
     clear: both;
     padding: 10px;
+    text-align: right;
+    color: #333;
+    font-size: 11px;
 }
 
 /* COLUMN TYPES */
