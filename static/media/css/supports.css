@@ -1,0 +1,96 @@
+/* Feuille de style du site eMaster */
+
+/* SUPPORTS */
+
+div.chapter {
+    text-align: justify;
+    margin: 2% 6% 1% 3em;
+    max-width: 60em;
+    width:expression(
+        document.body.clientWidth > (500/12) *
+        parseInt(document.body.currentStyle.fontSize)?
+            "60em":
+            "auto" );
+}
+
+div.chapter h3 a,
+div.chapter h4 a,
+div.chapter h5 a {
+	color: #3d0099;
+    /*font-size: 140%;*/
+    /*padding-left: 1em;*/
+}
+
+div.chapter h3 {
+	color: #3d0099;
+	font-size: 165%;
+    padding-left: 1em;
+    text-align: left;
+    line-height: 1.8;
+    border-style: solid none solid none;
+    border-color: #3d0099;
+    border-width: 1px;
+    background: #e4ffd8;
+}
+
+div.chapter h4 {
+	color: #3d0099;
+	font-size: 140%;
+    padding-left: 1em;
+    text-align: left;
+    border-style: none none solid solid;
+    border-color: #3d0099;
+    border-width: 1px;
+}
+
+div.chapter h5 {
+	color: #3d0099;
+	font-size: 120%;
+    padding-left: 1em;
+}
+
+div.chapter h6 {
+    color: #3d0099;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+div.exemple {
+    background: #e4ffd8;    
+    padding: 0.5em 1.5em;
+    border-left: 2px solid #d2ddcd; 
+    margin-top: 1em;
+}
+
+.exemple p:first-child {
+    color: #3d0099;
+    font-weight: bold;
+}
+
+.exemple table {
+    background: #eef;
+    width: 95%;
+    margin: auto;
+}
+
+.equation {
+    margin: auto;
+    padding: 0.5em 1em;
+    width: 80%;
+    background: #eef;
+    border: 1px solid #669;
+}
+
+.equation img {
+    text-align: center;
+    padding: 0 3em;
+}
+
+.equation p.titre {
+    margin-top: 0;
+    padding: 0;
+    text-align: left;
+    font-weight: bold;
+    color: #3d0099;
+}
+
