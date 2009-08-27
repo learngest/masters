@@ -59,7 +59,7 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/static/media/'
 # never put a beginning / on contents prefix
-CONTENTS_PREFIX = 'static/contents/'
+CONTENTS_PREFIX = 'static/contents'
 ALLOWED_INCLUDE_ROOTS = (os.path.join(PROJECT_PATH, CONTENTS_PREFIX),)
 
 # Make this unique, and don't share it with anybody.
