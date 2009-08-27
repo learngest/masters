@@ -7,7 +7,7 @@ body.login {
 .login #container {
     background: white;
     border: 1px solid #ccc;
-    width: 40em;
+    width: 35em;
     min-width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -23,17 +23,17 @@ body.login {
 }
 
 .login .form-row {
-    padding: 4px 0;
+    padding: 0.5em 0;
     float: left;
     width: 100%;
 }
 
 .login .form-row label {
     float: left;
-    width: 9em;
+    width: 10em;
     padding-right: 0.5em;
     line-height: 2em;
-    text-align: right;
+    text-align: left;
     font-size: 1em;
     color: #333;
 }
@@ -49,10 +49,10 @@ body.login {
 
 .login .submit-row {
     clear: both;
-    padding: 1em 0 0 9.4em;
+    padding: 1em 0 0 15.4em;
 }
 
 .login p {
-	padding: 4px 0;
+	padding: 0.5em 0 0 0;
     width: 100%;
 }
