@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^$', 'dashboard.views.dashboard'),
     (r'^staff/', include(admin.site.urls)),
-    (r'^login/', 'django_email_auth.views.login'),
-    #(r'^logout/', 'django_email_auth.views.logout'),
-    (r'^dashboard/', 'dashboard.views.dashboard'),
+    (r'^login/$', 'django_email_auth.views.login'),
+    (r'^logout/', 'django_email_auth.views.logout'),
+    (r'^dashboard/$', 'dashboard.views.dashboard'),
+    (r'^learning/', include('learning.urls')),
 )
