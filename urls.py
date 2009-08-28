@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     (r'^login/$', 'django_email_auth.views.login'),
     (r'^logout/', 'django_email_auth.views.logout'),
     (r'^dashboard/$', 'dashboard.views.dashboard'),
+    (r'^profile/$', 'coaching.views.profile'),
     (r'^learning/', include('learning.urls')),
 )
 
