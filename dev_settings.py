@@ -5,3 +5,5 @@ TEMPLATE_DEBUG = DEBUG
 
 SITE_ID = 1
 
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = '1025'
