@@ -23,7 +23,7 @@
   </div>
   <hr />
   <p><label for="id_{{ form.remember.name }}">{{ form.remember.label }}</label> {{ form.remember }} {{ form.errors.remember }}</p>
-  <p><a href="/lostpw/">{% trans "Help, I lost my password" %}</a></p>
+  <p><a href="{% url django.contrib.auth.views.password_reset %}">{% trans "Help, I lost my password" %}</a></p>
 </form>
 
 <script type="text/javascript">
