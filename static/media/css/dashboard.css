@@ -27,6 +27,8 @@ ul.actionlist li {
 
 .calendar {
 	text-align: center;
+    float: right;
+    margin-right: 1em;
 }
 
 .calendar th {
