@@ -22,3 +22,39 @@
 ul.actionlist li {
     list-style-type: none;
 }
+
+/* CALENDAR */
+
+.calendar {
+	text-align: center;
+}
+
+.calendar th {
+    text-align: center;
+}
+
+.calendar td.today {
+	font-weight: bold;
+	border: 2px solid black;
+	background: #ffc;
+}
+
+.calendar td.deadline {
+	background: #eee;
+    font-weight: bold;
+}
+
+.calendar td.deadline a {
+    text-decoration: underline;
+    color: red;
+}
+
+.calendar td.event {
+	background: #eee;
+    font-weight: bold;
+}
+
+.calendar td.event a {
+    text-decoration: underline;
+    color: green;
+}
