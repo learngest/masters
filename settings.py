@@ -102,7 +102,8 @@ INSTALLED_APPS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'email_auth.backends.EmailBackend',
+#    'email_auth.backends.EmailBackend',
+    'coaching.backends.Backend',
 )
 
 CUSTOM_USER_MODEL = 'coaching.Utilisateur'
