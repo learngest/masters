@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     'dashboard',
     'learning',
     'coaching',
+    'testing',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -127,4 +128,12 @@ LISTE_STATUTS = (
         (1,'prof'),
         (2,'admin'),
         (3,'staff'),
+)
+
+LISTE_TYPQ = (
+        ('qcm', 'QCM'),
+        ('qrm', 'QRM'),
+        ('rnd', 'Question à valeurs aléatoires'),
+        ('exa', 'Réponse exacte'),
+        ('num', 'Réponse numérique, 5 chiffres significatifs'),
 )
