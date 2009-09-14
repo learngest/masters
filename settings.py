@@ -122,3 +122,9 @@ LISTE_TYPES = (
         ('xls', 'MS Excel document'),
 )
 
+LISTE_STATUTS = (
+        (0,'student'),
+        (1,'prof'),
+        (2,'admin'),
+        (3,'staff'),
+)
