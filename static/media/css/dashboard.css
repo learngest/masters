@@ -60,3 +60,7 @@ ul.actionlist li {
     text-decoration: underline;
     color: green;
 }
+
+.valide {
+    color: green;
+}
