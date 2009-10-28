@@ -2,7 +2,6 @@
 
 import sys
 import os.path
-from django.utils.translation import ugettext_lazy as _
 
 try:
     from local_settings import *
@@ -19,8 +18,11 @@ try:
 except ImportError:
     pass
 
-if LOCAL_APPS_PATH:
-    sys.path.append(LOCAL_APPS_PATH)
+try:
+    if LOCAL_APPS_PATH:
+        sys.path.append(LOCAL_APPS_PATH)
+except NameError:
+    pass
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -109,7 +111,9 @@ AUTHENTICATION_BACKENDS = (
 
 CUSTOM_USER_MODEL = 'coaching.Utilisateur'
 
-LISTE_LANGUES = (
+_ = lambda s: s
+
+LANGUAGES = (
         ('fr', _('French')),
         ('en', _('English')),
         ('zh-cn', _('Simplified Chinese')),
