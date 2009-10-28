@@ -6,7 +6,11 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 
 from django.contrib import admin
-admin.autodiscover()
+#admin.autodiscover()
+
+import coaching.admin
+import learning.admin
+import testing.admin
 
 # Base
 urlpatterns = patterns('email_auth.views',
