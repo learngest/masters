@@ -51,6 +51,7 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static/uploads')
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/static/uploads/'
+WORKDONE_DIR = 'workdone'
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
@@ -71,6 +72,13 @@ SECRET_KEY = '%^)v@no(0iz_m5sx*mn#k2%#emm3m0117f2k4ltd+gg=ugz3ws'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+        'coaching.context_processors.media_urls',
+        'django.core.context_processors.auth',
+        'django.core.context_processors.debug',
+        'django.core.context_processors.i18n',
 )
 
 MIDDLEWARE_CLASSES = (
