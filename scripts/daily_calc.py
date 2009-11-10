@@ -16,10 +16,11 @@ from coaching.controllers import UserState
 
 for utilisateur in Utilisateur.objects.all():
     us = UserState(utilisateur)
-    us.nb_cours_valides(recalcul=True)
-    us.nb_travaux_rendus(recalcul=True)
-    us.cours_courant(recalcul=True)
-    us.nb_modules_in_current(recalcul=True)
-    us.nb_modules_valides_in_current(recalcul=True)
+    us.nb_cours_valides(recalcul=True,sauve=False)
+    us.nb_travaux_rendus(recalcul=True,sauve=False)
+    us.cours_courant(recalcul=True,sauve=False)
+    us.nb_modules_in_current(recalcul=True,sauve=False)
+    us.nb_modules_valides_in_current(recalcul=True,sauve=False)
+    utilisateur.save()
 
 
