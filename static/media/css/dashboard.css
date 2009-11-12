@@ -89,6 +89,7 @@ td, th {
 	padding: 5px;
 	text-align: left;
 	vertical-align: top;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 1.2em;
 }
@@ -104,3 +105,16 @@ thead th {
 }
 
 .even { background: #e4ffd8; }
+
+/* LISTES */
+
+ul {
+	line-height: 1.7;
+	margin: 1em 0;
+}
+
+li {
+    font-size: 100%;
+	line-height: 1.7;
+	padding: 0;
+}
