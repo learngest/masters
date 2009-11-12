@@ -5,8 +5,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 12px;
-    font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+/*    font-size: 12px;
+    font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif; */
+    font: 12px/1.7 Arial, Verdana, Helvetica, sans-serif;
     color: #333;
     background: #fff;
 }

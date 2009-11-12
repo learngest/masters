@@ -4,7 +4,9 @@
 
 div.chapter {
     text-align: justify;
+	color: black;
     margin: 2% 6% 1% 3em;
+	padding: 0.5em;
     max-width: 60em;
     width:expression(
         document.body.clientWidth > (500/12) *
@@ -13,51 +15,60 @@ div.chapter {
             "auto" );
 }
 
-div.chapter ul li {
-    font-size: 100%;
-}
-
 div.chapter h3 a,
 div.chapter h4 a,
 div.chapter h5 a {
-	color: #555;
-    /*font-size: 140%;*/
-    /*padding-left: 1em;*/
+	color: #339;
 }
 
 div.chapter h3 {
-	color: #555;
 	font-size: 165%;
     padding-left: 1em;
     text-align: left;
     line-height: 1.8;
     border-style: solid none solid none;
-    border-color: #555;
+	border-color: #339;
     border-width: 1px;
     background: #e4ffd8;
 }
 
 div.chapter h4 {
-	color: #555;
 	font-size: 140%;
     padding-left: 1em;
     text-align: left;
     border-style: none none solid solid;
-    border-color: #555;
+	border-color: #339;
     border-width: 1px;
 }
 
 div.chapter h5 {
-	color: #555;
 	font-size: 120%;
     padding-left: 1em;
-    text-transform: None;
+    text-transform: none;
+	letter-spacing: normal;
 }
 
 div.chapter h6 {
-    color: #555;
+    color: #339;
     font-weight: bold;
     font-size: 12px;
+}
+
+div.chapter p,
+div.chapter ol,
+div.chapter dl,
+div.chapter ul {
+	line-height: 1.7;
+	margin: 1em 0;
+}
+
+div.chapter ul li,
+div.chapter dl dt,
+div.chapter dl dd,
+div.chapter ol li {
+    font-size: 100%;
+	line-height: 1.7;
+	padding: 0;
 }
 
 div.exemple {
@@ -97,5 +108,32 @@ div.exemple {
     text-align: left;
     font-weight: bold;
     color: #3d0099;
+}
+
+/* TABLES */
+table {
+	border-collapse:collapse; 
+	border-color:#ccc;
+	line-height: 1.2em;
+    width: 80%;
+}
+tr:hover {background: #d8fff9;}
+td, th {
+	border-bottom: 1px solid #bbb; 
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 1.2em;
+}
+thead th { 
+    cursor: pointer;
+	padding: 5px; 
+	background: #ddd4cd; 
+    color: black;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+    letter-spacing: 2px;
+	font-size: 12px;
 }
 

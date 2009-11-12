@@ -64,3 +64,43 @@ ul.actionlist li {
 .valide {
     color: green;
 }
+
+/* TABLES */
+
+table.tabcours {
+	border-collapse:collapse; 
+	border-color:#ccc;
+	line-height: 1.2em;
+	color: black;
+}
+
+table.tabcours td a {
+	color: #339;
+}
+
+table.tabcours td a:hover {
+	font-weight: bold;
+}
+
+table.tabcours tr:hover {background: #d8fff9;}
+
+td, th {
+	border-bottom: 1px solid #bbb; 
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 1.2em;
+}
+thead th { 
+    cursor: pointer;
+	padding: 5px; 
+	background: #ddd4cd; 
+    color: black;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+    letter-spacing: 2px;
+	font-size: 12px;
+}
+
+.even { background: #e4ffd8; }
