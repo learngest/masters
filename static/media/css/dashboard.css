@@ -23,48 +23,6 @@ ul.actionlist li {
     list-style-type: none;
 }
 
-/* CALENDAR */
-
-.calendar {
-	text-align: center;
-    float: right;
-    margin-right: 1em;
-}
-
-.calendar th {
-    text-align: center;
-}
-
-.calendar td.today {
-	font-weight: bold;
-	border: 2px solid black;
-	background: #ffc;
-}
-
-.calendar td.deadline {
-	background: #eee;
-    font-weight: bold;
-}
-
-.calendar td.deadline a {
-    text-decoration: underline;
-    color: red;
-}
-
-.calendar td.event {
-	background: #eee;
-    font-weight: bold;
-}
-
-.calendar td.event a {
-    text-decoration: underline;
-    color: green;
-}
-
-.valide {
-    color: green;
-}
-
 /* TABLES */
 
 table.tabcours {
@@ -84,8 +42,12 @@ table.tabcours td a:hover {
 
 table.tabcours tr:hover {background: #d8fff9;}
 
-td, th {
+table.tabcours td,
+table.tabcours th {
 	border-bottom: 1px solid #bbb; 
+}
+
+td, th {
 	padding: 5px;
 	text-align: left;
 	vertical-align: top;
@@ -106,6 +68,49 @@ thead th {
 
 .even { background: #e4ffd8; }
 
+/* CALENDAR */
+
+table.calendar {
+	text-align: center;
+    float: right;
+    margin-right: 1em;
+}
+
+table.calendar th,
+table.calendar td {
+    text-align: center;
+}
+
+table.calendar td.today {
+	border: 2px solid black;
+	font-weight: bold;
+	background: #ffc;
+}
+
+table.calendar td.deadline {
+	background: #eee;
+    font-weight: bold;
+}
+
+table.calendar td.deadline a {
+    text-decoration: underline;
+    color: red;
+}
+
+table.calendar td.event {
+	background: #eee;
+    font-weight: bold;
+}
+
+table.calendar td.event a {
+    text-decoration: underline;
+    color: green;
+}
+
+.valide {
+    color: green;
+}
+
 /* LISTES */
 
 ul {
@@ -117,4 +122,22 @@ li {
     font-size: 100%;
 	line-height: 1.7;
 	padding: 0;
+}
+
+/* OTHER */
+
+.colorbox {
+	margin: 1em;
+	padding: 1em;
+	border: 1px solid black;
+    background: #ffc;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.red {
+	font-weight: bold;
+	color: red;
 }
