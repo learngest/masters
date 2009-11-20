@@ -1,5 +1,9 @@
 /* DASHBOARD */
 
+a:link, a:visited {
+    color: #339;
+}
+
 .dashboard .module table th {
     width: 100%;
 }

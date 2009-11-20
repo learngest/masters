@@ -42,7 +42,10 @@ urlpatterns += patterns('',
 # Développement
 if settings.SITE_ID==1:
     contents_root = os.path.join(settings.PROJECT_PATH, settings.CONTENTS_PREFIX)
+    uploads_root = os.path.join(settings.PROJECT_PATH, settings.MEDIA_ROOT)
     urlpatterns += patterns('',
     (r'^static/contents/(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': contents_root }),
+    (r'^static/uploads/(?P<path>.*)$', 'django.views.static.serve',
+    {'document_root': uploads_root }),
 )
