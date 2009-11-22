@@ -135,11 +135,14 @@ LISTE_TYPES = (
         ('xls', 'MS Excel document'),
 )
 
+(STUDENT, ASSISTANT, PROF, ADMIN, STAFF) = (0,10,20,30,40)
+
 LISTE_STATUTS = (
-        (0,'student'),
-        (1,'prof'),
-        (2,'admin'),
-        (3,'staff'),
+        (STUDENT,'student'),
+        (ASSISTANT,'assistant'),
+        (PROF,'prof'),
+        (ADMIN,'admin'),
+        (STAFF,'staff'),
 )
 
 LISTE_TYPQ = (
