@@ -28,6 +28,9 @@
             <strong>{% firstof user.first_name user.username %}</strong>.
             {% block userlinks %}
                     <a href="/profile/"> {% trans 'Change account' %}</a> /
+					{% if user.is_staff %}
+					<a href="{% url admin:index %}">{% trans 'Site administration' %}</a> /
+					{% endif %}
                     <a href="/logout/"> {% trans 'Log out' %}</a>
             {% endblock %}
         </div>
