@@ -41,6 +41,8 @@ LANGUAGE_CODE = 'en-us'
 # to load the internationalization machinery.
 USE_I18N = True
 
+DATE_FORMAT = 'd M Y'
+
 # Sessions
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True                                                                            
 # Absolute path to the directory that holds media.
