@@ -3,6 +3,7 @@
 
 import os
 import sys
+import datetime
 
 sys.path.append(os.path.dirname(os.path.abspath('%s/../..' % __file__)))
 
@@ -11,7 +12,7 @@ from django.conf import settings
 
 dummy = settings.INSTALLED_APPS
 
-from coaching.models import Utilisateur
+from coaching.models import Utilisateur, Event
 from coaching.controllers import UserState
 
 for utilisateur in Utilisateur.objects.all():
@@ -26,4 +27,7 @@ for utilisateur in Utilisateur.objects.all():
 #    utilisateur.save()
     us.recalcule_tout(sauver=True)
 
+date_limite = datetime.datetime.now() - datetime.timedelta(7)
+for event in  Event.objects.filter(date__lt=date_limite):
+    event.delete()
 
