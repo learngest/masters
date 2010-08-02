@@ -21,56 +21,41 @@
 
 <body>
 
-<!-- Container -->
-<div id="container">
+{% block header_toolbar %}<div id="header-toolbar-container">
+	<div id="header-toolbar">
+		{% block user_infos %}{% endblock %}
+	</div>
+</div>{% endblock header_toolbar %}
 
-    {% if not is_popup %}
-    <!-- Header -->
-    <div id="header">
-        <div id="branding">
-        {% block branding %}{% endblock %}
-        </div>
-        {% if user.is_authenticated %}
-        <div id="user-tools">
-            {% trans 'Welcome,' %}
-            <strong>{% firstof user.first_name user.username %}</strong>.
-            {% block userlinks %}
-                    <a href="/profile/"> {% trans 'Change account' %}</a> /
-					{% if user.is_staff %}
-					<a href="{% url admin:index %}">{% trans 'Site administration' %}</a> /
-					{% endif %}
-                    <a href="/logout/"> {% trans 'Log out' %}</a>
-            {% endblock %}
-        </div>
-        {% endif %}
-        {% block nav-global %}{% endblock %}
-    </div>
-    <!-- END Header -->
-	{% block breadcrumbs %}<div class="breadcrumbs">
-		{% if title %}{{ title }}{% endif %}
-	</div>{% endblock %}
-    {% endif %}
+{% block header %}<div id="header-container">
+	<div id="header">
+		<h1>Master e-learning - <em>beta</em></h1>
+		<p>{% if client.nom %}{{ client.nom }}{% else %}{% trans "Innovative e-learning Framework" %}{% endif %}</p>
+	</div>
+</div>{% endblock header %}
 
-        {% if messages %}
-        <ul class="messagelist">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>
-        {% endif %}
+{% block nav-global %}{% endblock %}
 
-    <!-- Content -->
-    <div id="content" class="{% block coltype %}colM{% endblock %}">
-        {% block pretitle %}{% endblock %}
-        {% block content_title %}{% if title %}<h1>{{ title|capfirst }}</h1>{% endif %}{% endblock %}
-        {% block content %}
-        {% block object-tools %}{% endblock %}
-        {{ content }}
-        {% endblock %}
-        {% block sidebar %}{% endblock %}
-        <br class="clear" />
-    </div>
-    <!-- END Content -->
+{% block breadcrumbs %}<div id="breadcrumb">
+	{% if title %}{{ title }}{% endif %}
+</div>{% endblock %}
 
-    {% block footer %}<div id="footer"><hr>&copy; CFF 2009-2010</div>{% endblock %}
+{% if messages %}
+<ul class="messagelist">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>
+{% endif %}
+
+<!-- Content -->
+<div id="content-container">
+	{% block content %}
+	{% endblock %}
 </div>
-<!-- END Container -->
+<!-- END Content -->
+
+{% block footer %}<div id="footer-container">
+	<div id="footer">
+		<p>{% trans "© CFF 2009-" %}{% now "Y" %}</p>
+	</div>
+</div>{% endblock %}
 
 </body>
 </html>
