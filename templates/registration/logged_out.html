@@ -1,12 +1,9 @@
-{% extends "base_site.html" %}
+{% extends "base.html" %}
 {% load i18n %}
 
-{% block breadcrumbs %}</a></div>{% endblock %}
-
 {% block content %}
-
+<div class="content">
 <p>{% trans "Thanks for visiting us today." %}</p>
-
 <p><a href="/">{% trans 'Log in again' %}</a></p>
-
+</div>
 {% endblock %}
