@@ -1,10 +1,19 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{{ title }} | {% trans 'e-Learning Master' %}{% endblock %}
+{% block baselink %}{% endblock baselink %}
+{% block javascript %}{% endblock javascript %}
 
-{% block branding %}
-<h1 id="site-name">{% trans 'e-Learning Master' %}</h1>
+{% block user_infos %}
+<p><a class="user" href="{% url coaching.views.profile %}">{{ user }}</a></p>
+<p><a class="logout" href="{% url email_auth.views.logout %}">{% trans "Logout" %}</a></p>
 {% endblock %}
 
+
+{% block breadcrumbs %}<div id="breadcrumb">
+	{% if title %}{{ title }}{% endif %}
+</div>{% endblock %}
+
 {% block nav-global %}{% endblock %}
+
+{% block content %}{% endblock content %}
