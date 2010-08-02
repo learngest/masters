@@ -23,7 +23,7 @@
 
 {% block header_toolbar %}<div id="header-toolbar-container">
 	<div id="header-toolbar">
-		{% block user_infos %}{% endblock %}
+		{% block user_infos %}{% trans "Logged out" %}{% endblock %}
 	</div>
 </div>{% endblock header_toolbar %}
 
@@ -35,10 +35,6 @@
 </div>{% endblock header %}
 
 {% block nav-global %}{% endblock %}
-
-{% block breadcrumbs %}<div id="breadcrumb">
-	{% if title %}{{ title }}{% endif %}
-</div>{% endblock %}
 
 {% if messages %}
 <ul class="messagelist">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>
