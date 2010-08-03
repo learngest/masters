@@ -252,6 +252,7 @@ hr {
 #nav-container {
 	background: #d9d5ca;
 	border-top: 1px solid #fff;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
 }
 #content-container {
 	background: #fff;
@@ -266,6 +267,7 @@ hr {
 	width: 840px;
 	margin: 0 auto;
 	padding: 8px 10px;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
 	font-size: 11px;
 	text-align: right;
 }
@@ -312,18 +314,22 @@ hr {
 }
 
 /* HEADER
+ * Les !important et les répétitions sont nécessaires
+ * pour dominer la feuille de style de l'admin.
 -------------------------------------------------------- */
 #header {
-	width: 840px;
-	margin: 0 auto;
-	padding: 18px 0;
-	position: relative;
+	width: 840px !important;
+	margin: 0 auto !important;
+	position: relative !important;
+	padding: 18px 0 !important;
+	background: #c6c3b2 !important;
 }
 #header h1,
 #header p,
 #header ul {
 	margin: 0;
 	line-height: 14px;
+	color: #1a1a12 !important;
 }
 #header h1 {
 	font-family: Helvetica, Arial, Verdana, sans-serif;
@@ -331,8 +337,10 @@ hr {
 	font-weight: bold;
 	font-variant: small-caps;
 	border-bottom: 3px solid #e8e7e0;
+	padding-bottom: 8px;
 }
 #header p {
+	font-family: Helvetica, Arial, Verdana, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	font-variant: small-caps;
@@ -381,6 +389,7 @@ hr {
 
 #nav li {
 	display: inline;
+	line-height: 18px;
 }
 #nav li a:link,
 #nav li a:visited {
@@ -802,5 +811,7 @@ div.exemple {
 	text-decoration: underline;
 }
 
+/* ADMIN
+-------------------------------------------------------- */
 
 
