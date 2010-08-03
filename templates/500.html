@@ -6,7 +6,9 @@
 </div>{% endblock %}
 
 {% block content %}
+<div class="content">
 	<p>{% trans "Ooops - The action you requested caused an error. It will be reported to the site administrators." %}</p>
-	<p><a href="/">{% trans "Back to your starting page" %}</a></p>
+    <p><a href="{% url dashboard.views.dashboard %}">{% trans "Back to your starting page" %}</a></p>
+</div>
 {% endblock content %}
 
