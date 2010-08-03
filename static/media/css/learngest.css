@@ -814,4 +814,18 @@ div.exemple {
 /* ADMIN
 -------------------------------------------------------- */
 
+#content {
+	margin-left: 0px !important;
+}
 
+.colMS h1 {
+	border: none;
+}
+
+.module table {
+	margin: 0;
+}
+
+.module table th {
+	width: 70%;
+}
