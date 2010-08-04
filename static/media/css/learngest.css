@@ -942,3 +942,7 @@ form .aligned p.help {
 .inline-group .tabular td.original p {
 	margin-top: 2px;
 }
+
+fieldset p.datetime {
+	clear: none;
+}
