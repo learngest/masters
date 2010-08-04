@@ -8,16 +8,14 @@
 	<title>{% block title %}{% trans "Master e-learning" %}{% endblock %}</title>
 	{% block style %}
 	{% if client.style %}
-	<link rel="stylesheet" href="/media/css/{{ client.style }}" type="text/css" media="screen" title="Normal" />
-	<link rel="stylesheet" href="/media/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="/static/media/css/{{ client.style }}" type="text/css" media="screen" title="Normal" />
+	<link rel="stylesheet" href="/static/media/css/print.css" type="text/css" media="print" />
 	{% else %}
-	<link rel="stylesheet" href="/media/css/learngest.css" type="text/css" media="screen" title="Normal" />
-	<link rel="stylesheet" href="/media/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="/static/media/css/learngest.css" type="text/css" media="screen" title="Normal" />
+	<link rel="stylesheet" href="/static/media/css/print.css" type="text/css" media="print" />
 	{% endif %}
 	{% endblock style %}
-	{% block extrastyle %}{% endblock extrastyle %}
-    {% block baselink %}{% endblock baselink %}
-    {% block javascript %}{% endblock javascript %}
+	{% block extrahead %}{% endblock extrahead %}
 </head>
 
 <body>

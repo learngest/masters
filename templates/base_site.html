@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block baselink %}{% endblock baselink %}
-{% block javascript %}{% endblock javascript %}
-
 {% block user_infos %}
 <p><a class="user" href="{% url coaching.views.profile %}">{{ user }}</a></p>
 <p><a class="logout" href="{% url email_auth.views.logout %}">{% trans "Logout" %}</a></p>

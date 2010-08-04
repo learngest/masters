@@ -48,6 +48,6 @@ if settings.SITE_ID==1:
     {'document_root': contents_root }),
     (r'^static/uploads/(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': uploads_root }),
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve',
+    (r'^static/media/(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': os.path.join(settings.PROJECT_PATH, 'static/media') }),
 )
