@@ -17,8 +17,7 @@
 	{% endblock style %}
 	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% load adminmedia %}{% admin_media_prefix %}css/base.css{% endblock %}" />
 	{% block extrastyle %}{% endblock extrastyle %}
-    {% block baselink %}{% endblock baselink %}
-    {% block javascript %}{% endblock javascript %}
+	{% block extrahead %}{% endblock %}
 </head>
 
 <body>
