@@ -827,6 +827,104 @@ div.exemple {
 	margin: 0;
 }
 
+.module table tr:hover,
+.module table th:hover {
+	background: #dededb;
+}
+
 .module table th {
 	width: 70%;
+}
+
+.breadcrumbs {
+	margin: 0px auto;
+	border-top: none !important;
+	width: 840px;
+}
+
+#changelist-filter {
+	position: relative !important;
+	z-index: 0 !important;
+	width: 804px !important;
+	padding: 5px 10px;
+	margin: 20px 0;
+	font-size: 11px;
+	border: 1px solid #e3e4de;
+	border-width: 1px 0;
+}
+#changelist-filter h2 {
+	font-size: 13px !important;
+	font-weight: bold;
+	color: #666;
+	padding: 0 0 0 20px !important;
+	margin: 4px 0;
+	border: 0;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	background: url(../img/loupe.png) no-repeat 0 1px;
+}
+#changelist-filter h3 {
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+#changelist-filter p {
+	padding: 0;
+	margin: 4px 0;
+}
+#changelist-filter ul {
+	display: inline;
+	list-style: none;
+	list-style-position: outside;
+	margin-left: 0px !important;
+}
+#changelist-filter ul li { display: inline; }
+#changelist-filter ul li a:link,
+#changelist-filter ul li a:visited {
+	color: #1a1a12;
+	padding: 0 4px;
+	text-decoration: none;
+}
+#changelist-filter ul li a:hover,
+#changelist-filter ul li a:focus,
+#changelist-filter ul li a:active {
+	text-decoration: underline;
+}
+#changelist-filter ul li.selected {
+	border: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#changelist-filter ul li.selected a {
+	color: #e5060d;
+	text-decoration: underline;
+}
+
+#changelist-search,
+#changelist-search div {
+	margin: 0px !important;
+	line-height: 10px !important;
+}
+
+.filtered #toolbar {
+	border-bottom: none !important;
+}
+
+#toolbar img {
+	display: none;
+}
+
+.actions,
+#toolbar {
+	margin: 0px !important;
+	background: white !important;
+	width: 819px !important;
+}
+
+.filtered .actions {
+	margin: 0px !important;
+	width: 819px !important;
 }
