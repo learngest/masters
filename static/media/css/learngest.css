@@ -928,3 +928,17 @@ div.exemple {
 	margin: 0px !important;
 	width: 819px !important;
 }
+
+.form-row,
+.form-row div,
+form .aligned p.help {
+	margin: 3px 0px;
+}
+
+form .aligned p.help {
+	padding-left: 0px !important;
+}
+
+.inline-group .tabular td.original p {
+	margin-top: 2px;
+}
