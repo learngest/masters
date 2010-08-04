@@ -943,6 +943,7 @@ form .aligned p.help {
 	margin-top: 2px;
 }
 
-fieldset p.datetime {
+fieldset p.datetime,
+fieldset div.selector-chosen {
 	clear: none;
 }
