@@ -31,7 +31,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 html { overflow-y: scroll; }
 body {
 	font: 12px Helvetica, Arial, Verdana, sans-serif;
-	background: #c6c3b2;
+	background: white;
 	color: #1a1a12;
 }
 label { cursor: pointer; }
@@ -744,7 +744,7 @@ div.exemple {
 }
 
 .exemple p:first-child {
-    color: #e74b4c;
+    color: #0057d7;
     font-weight: bold;
 }
 
@@ -947,3 +947,21 @@ fieldset p.datetime,
 fieldset div.selector-chosen {
 	clear: none;
 }
+
+ul.messagelist {
+    padding: 0px !important;
+    margin: 5px auto !important;
+	width: 856px !important;
+}
+
+ul.messagelist li {
+    font-size: 12px;
+    display: block;
+    padding: 4px 5px 4px 25px;
+	margin: 0px !important;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    color: #666;
+    background: #ffc url(../img/admin/icon_success.gif) 5px .3em no-repeat;
+}
+
