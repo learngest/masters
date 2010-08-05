@@ -6,7 +6,6 @@
 {% block breadcrumb %}{% trans "Login form" %}{% endblock breadcrumb %}
 
 {% block content %}
-<div class="content">
 
 {% if form.non_field_errors %}
 <div class="errormsg">{{ form.non_field_errors }}</div>
@@ -32,7 +31,6 @@
 	</div>
 </form>
 
-</div>
 
 <script type="text/javascript">
 document.getElementById('id_email').focus()
