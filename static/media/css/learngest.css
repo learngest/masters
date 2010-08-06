@@ -986,3 +986,63 @@ ul.messagelist li {
     background: #ffc url(../img/admin/icon_success.gif) 5px .3em no-repeat;
 }
 
+/* CALENDAR 
+-------------------------------------------*/
+
+table.calendar {
+	text-align: center;
+    float: right;
+	width: auto;
+	margin: 0px;
+	line-height: 14px;
+}
+
+table.calendar tr:hover {background: white;}
+
+table.calendar th,
+table.calendar td {
+    text-align: center;
+}
+
+table.calendar td.today {
+	border: 2px solid black;
+	font-weight: bold;
+	background: #ffc;
+}
+
+table.calendar td.deadline {
+	background: #eee;
+    font-weight: bold;
+}
+
+table.calendar td.deadline a {
+    text-decoration: underline;
+    color: red;
+}
+
+table.calendar td.event {
+	background: #eee;
+    font-weight: bold;
+}
+
+table.calendar td.event a {
+    text-decoration: underline;
+    color: green;
+}
+
+.valide {
+    color: green;
+}
+
+/* TABLE DES COURS
+-------------------------------------------*/
+
+table.tabcours td a {
+	color: #339;
+	text-decoration: none;
+}
+
+table.tabcours td a:hover {
+	font-weight: bold;
+}
+
