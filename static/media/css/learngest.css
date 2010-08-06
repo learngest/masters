@@ -852,6 +852,7 @@ div.exemple {
 .breadcrumbs {
 	margin: 0px auto;
 	color: #999;
+    background: white url(../img/admin/nav-bg-reverse.gif) 0 -10px repeat-x;
 	border-top: none !important;
 	width: 840px;
 	border-bottom: 1px solid #ccc;
