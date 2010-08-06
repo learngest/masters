@@ -485,9 +485,15 @@ hr {
 	padding: 20px 10px 30px 10px;
 }
 
-.content h2 {
+.content h1,
+.content h2,
+.content h3 {
 	font-weight: bold;
 	border: none;
+}
+
+.content h2,
+.content h3 {
 	color: #666;
 }
 
