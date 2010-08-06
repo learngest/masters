@@ -484,6 +484,13 @@ hr {
 	margin: 0 auto;
 	padding: 20px 10px 30px 10px;
 }
+
+.content h2 {
+	font-weight: bold;
+	border: none;
+	color: #666;
+}
+
 .block25 {
 	float: left;
 	width: 200px;
@@ -838,8 +845,16 @@ div.exemple {
 
 .breadcrumbs {
 	margin: 0px auto;
+	color: #999;
 	border-top: none !important;
 	width: 840px;
+	border-bottom: 1px solid #ccc;
+	font-size: 11px;
+	padding: 2px 8px 3px;
+}
+
+.breadcrumbs a {
+	text-decoration: none;
 }
 
 #changelist-filter {
