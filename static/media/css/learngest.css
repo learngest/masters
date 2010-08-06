@@ -592,8 +592,8 @@ ul.changelist-filter li.selected a {
 /* infomsg
 ----------------------------- */
 .infomsg {
-	background: #f2ffe7;
-	border: 1px solid #d6eac5;
+	background: #ffc;
+	border: 1px solid #ccc;
 	border-width: 1px 0;
 	margin: 10px 0;
 	padding: 10px;
@@ -798,7 +798,7 @@ div.exemple {
 	margin: 0 0 8px 0;
 }
 .enonce p.score {
-	color: #e74b4c;
+	color: #0057d7;
     font-weight: bold;
 }
 
