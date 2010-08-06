@@ -1047,3 +1047,21 @@ table.tabcours td a:hover {
 	font-weight: bold;
 }
 
+/* AUTRES
+-------------------------------------------*/
+
+.colorbox {
+	margin: 1em;
+	padding: 1em;
+	border: 1px solid black;
+    background: #ffc;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.red {
+	font-weight: bold;
+	color: red;
+}
