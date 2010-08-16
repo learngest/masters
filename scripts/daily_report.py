@@ -11,6 +11,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'masters.settings'
 from django.conf import settings
 
 from django.template.loader import render_to_string
+from django.utils.encoding import smart_str
 
 dummy = settings.INSTALLED_APPS
 
@@ -38,4 +39,4 @@ for groupe in Groupe.objects.order_by('client','nom',):
     liste.append(groupe)
 
 report = render_to_string('report.txt', {'liste_groupes': liste, 'hier': hier,})
-print report
+print smart_str(report)
