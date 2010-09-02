@@ -8,55 +8,123 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-29 18:04+0200\n"
+"POT-Creation-Date: 2010-09-02 13:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: settings.py:111
+#: settings.py:125
 msgid "French"
 msgstr "Français"
 
-#: settings.py:112
+#: settings.py:126
 msgid "English"
 msgstr "Anglais"
 
-#: settings.py:113
-msgid "Simplified Chinese"
-msgstr "Chinois simplifié"
+#: templates/404.html:5 templates/500.html:5 templates/base_site.html:15
+#: templates/admin/base_site.html:15
+msgid "Dashboard"
+msgstr "Tableau de bord"
 
-#: templates/base.html:27 templates/admin/base.html:27
-msgid "Welcome,"
-msgstr "Bienvenue"
+#: templates/404.html:5 templates/500.html:5
+msgid "Error"
+msgstr "Erreur"
 
-#: templates/base.html:30 templates/admin/base.html:30
-msgid "Change account"
-msgstr "Modifier mon compte"
+#: templates/404.html:9
+msgid "Ooops - It seems the page you requested doesn't exist."
+msgstr "Désolé, la page demandée n'existe pas."
 
-#: templates/base.html:31 templates/admin/base.html:31
-msgid "Log out"
+#: templates/404.html:10 templates/500.html:10
+msgid "Back to your starting page"
+msgstr "Retour à la page d'accueil"
+
+#: templates/500.html:9
+msgid ""
+"Ooops - The action you requested caused an error. It will be reported to the "
+"site administrators."
+msgstr ""
+"L'action demandée a proviqué une erreur. Un mail a été envoyé aux"
+"administrateurs du site."
+
+#: templates/base.html:8 templates/admin/base.html:8
+msgid "Master e-learning"
+msgstr ""
+
+#: templates/base.html:25 templates/admin/base.html:27
+msgid "Logged out"
+msgstr "Déconnecté"
+
+#: templates/base.html:32 templates/admin/base.html:34
+msgid "Innovative e-learning Framework"
+msgstr ""
+
+#: templates/base.html:55 templates/admin/base.html:62
+msgid "© CFF 2009-"
+msgstr ""
+
+#: templates/base_site.html:6 templates/admin/base_site.html:6
+msgid "Logout"
 msgstr "Déconnexion"
 
-#: templates/base_site.html:4 templates/base_site.html.py:7
-#: templates/admin/base_site.html:4 templates/admin/base_site.html.py:7
-msgid "e-Learning Master"
-msgstr "Master e-learning"
+#: templates/base_site.html:13 templates/admin/base_site.html:13
+msgid "Administration"
+msgstr ""
 
-#: templates/registration/logged_out.html:8
+#: templates/base_site.html:17 templates/admin/base_site.html:16
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/registration/logged_out.html:5
 msgid "Thanks for visiting us today."
 msgstr "Merci d'avoir travaillé avec nous aujourd'hui."
 
-#: templates/registration/logged_out.html:10
+#: templates/registration/logged_out.html:6
 msgid "Log in again"
 msgstr "Se connecter à nouveau"
 
-#: templates/registration/login.html:22
+#: templates/registration/login.html:4
+msgid "Login"
+msgstr ""
+
+#: templates/registration/login.html:6
+msgid "Login form"
+msgstr "Formulaire de connexion"
+
+#: templates/registration/login.html:15
+msgid "Login Form"
+msgstr "Formulaire de connexion"
+
+#: templates/registration/login.html:29
 msgid "Log in"
 msgstr "Connexion"
 
-#: templates/registration/login.html:26
+#: templates/registration/login.html:30
 msgid "Help, I lost my password"
 msgstr "J'ai perdu mon mot de passe"
+
+#: templates/registration/password_reset_email.html:2
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr "Vous recevez cet email parce que vous avez demandé un nouveau mot de passe"
+
+#: templates/registration/password_reset_email.html:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr "pour votre compte utilisateur %(site_name)s"
+
+#: templates/registration/password_reset_email.html:5
+msgid "Please go to the following page and choose a new password:"
+msgstr "Merci de vous rendre sur la page suivante et de choisir un nouveau mot de passe :"
+
+#: templates/registration/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Merci d'avoir travaillé avec nous aujourd'hui."
+
+#: templates/registration/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "L'équipe %(site_name)s"
+
