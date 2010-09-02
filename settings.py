@@ -119,36 +119,3 @@ AUTHENTICATION_BACKENDS = (
 
 CUSTOM_USER_MODEL = 'coaching.Utilisateur'
 
-_ = lambda s: s
-
-LANGUAGES = (
-        ('fr', _('French')),
-        ('en', _('English')),
-#        ('zh-cn', _('Simplified Chinese')),
-)
-
-LISTE_TYPES = (
-        ('htm', 'HTML'),
-        ('swf', 'Flash movie'),
-        ('pdf', 'Portable Document Format'),
-        ('doc', 'MS Word document'),
-        ('xls', 'MS Excel document'),
-)
-
-(STUDENT, ASSISTANT, PROF, ADMIN, STAFF) = (0,10,20,30,40)
-
-LISTE_STATUTS = (
-        (STUDENT,'student'),
-        (ASSISTANT,'assistant'),
-        (PROF,'prof'),
-        (ADMIN,'admin'),
-        (STAFF,'staff'),
-)
-
-LISTE_TYPQ = (
-        ('qcm', 'QCM'),
-        ('qrm', 'QRM'),
-        ('rnd', 'Question à valeurs aléatoires'),
-        ('exa', 'Réponse exacte'),
-        ('num', 'Réponse numérique, 5 chiffres significatifs'),
-)
