@@ -124,7 +124,7 @@ _ = lambda s: s
 LANGUAGES = (
         ('fr', _('French')),
         ('en', _('English')),
-        ('zh-cn', _('Simplified Chinese')),
+#        ('zh-cn', _('Simplified Chinese')),
 )
 
 LISTE_TYPES = (
