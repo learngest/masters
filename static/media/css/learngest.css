@@ -207,6 +207,12 @@ table td a:hover,
 table td a:focus,
 table td a:active {}
 
+#changelist table td a:link,
+#changelist table td a:visited {
+	font-weight: bold;
+	color: #5b80b2;
+}
+
 /* Misc */
 blockquote {
 	border-left: 8px solid #EFF1E8;
