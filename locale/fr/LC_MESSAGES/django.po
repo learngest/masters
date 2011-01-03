@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-02 13:50+0200\n"
+"POT-Creation-Date: 2010-12-17 17:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: settings.py:125
+#: listes.py:6
 msgid "French"
 msgstr "Français"
 
-#: settings.py:126
+#: listes.py:7
 msgid "English"
 msgstr "Anglais"
 
@@ -47,8 +47,8 @@ msgid ""
 "Ooops - The action you requested caused an error. It will be reported to the "
 "site administrators."
 msgstr ""
-"L'action demandée a proviqué une erreur. Un mail a été envoyé aux"
-"administrateurs du site."
+"L'action demandée a provoqué une erreur. Un mail a été envoyé "
+"aux administrateurs du site."
 
 #: templates/base.html:8 templates/admin/base.html:8
 msgid "Master e-learning"
@@ -108,7 +108,8 @@ msgstr "J'ai perdu mon mot de passe"
 
 #: templates/registration/password_reset_email.html:2
 msgid "You're receiving this e-mail because you requested a password reset"
-msgstr "Vous recevez cet email parce que vous avez demandé un nouveau mot de passe"
+msgstr ""
+"Vous recevez cet email parce que vous avez demandé un nouveau mot de passe"
 
 #: templates/registration/password_reset_email.html:3
 #, python-format
@@ -117,7 +118,9 @@ msgstr "pour votre compte utilisateur %(site_name)s"
 
 #: templates/registration/password_reset_email.html:5
 msgid "Please go to the following page and choose a new password:"
-msgstr "Merci de vous rendre sur la page suivante et de choisir un nouveau mot de passe :"
+msgstr ""
+"Merci de vous rendre sur la page suivante et de choisir un nouveau mot de "
+"passe :"
 
 #: templates/registration/password_reset_email.html:10
 msgid "Thanks for using our site!"
@@ -127,4 +130,3 @@ msgstr "Merci d'avoir travaillé avec nous aujourd'hui."
 #, python-format
 msgid "The %(site_name)s team"
 msgstr "L'équipe %(site_name)s"
-
