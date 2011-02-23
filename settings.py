@@ -25,6 +25,7 @@ except NameError:
     pass
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+PROJECT_NAME = os.path.basename(PROJECT_PATH)
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -46,6 +47,8 @@ DATE_FORMAT = 'd M Y'
 
 # Sessions
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True                                                                            
+ROOT_URLCONF = '%s.urls' % PROJECT_NAME
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static/uploads')
@@ -90,8 +93,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
 )
-
-ROOT_URLCONF = 'masters.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
