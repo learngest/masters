@@ -5,15 +5,15 @@ import os
 import sys
 import optparse
 
-sys.path.append(os.path.dirname(os.path.abspath('%s/../..' % __file__)))
+curdir, filename = os.path.split(__file__)
+sys.path.append(os.path.abspath(os.path.join(curdir, os.pardir)))
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'masters.settings'
-from django.conf import settings
+from django.core.management import setup_environ
+import settings
+setup_environ(settings)
 
 from django.contrib.sessions.models import Session
 from django.contrib.auth.models import User
-
-dummy = settings.INSTALLED_APPS
 
 def user_from_session_key(sessionid):
     try:
