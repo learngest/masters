@@ -34,6 +34,10 @@ PROJECT_NAME = os.path.basename(PROJECT_PATH)
 # system time zone.
 TIME_ZONE = 'Europe/Paris'
 DATETIME_FORMAT = "Y-m-d H:i:s"
+DATE_FORMAT = 'd M Y'
+DATETIME_INPUT_FORMATS = ('%d/%m/%Y %H:%M:%S', '%d-%m-%Y %H:%M:%S',
+                          '%d/%m/%Y', '%d-%m-%Y',)
+DATE_INPUT_FORMATS = ('%d/%m/%Y', '%d-%m-%Y',)
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -42,8 +46,6 @@ LANGUAGE_CODE = 'en-us'
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
-
-DATE_FORMAT = 'd M Y'
 
 # Sessions
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True                                                                            
