@@ -30,13 +30,14 @@ for groupe in Groupe.objects.order_by('client','nom',):
     hier = auj - datetime.timedelta(1)
     groupe.hier = groupe.utilisateur_set.filter(
             last_login__gte=hier,last_login__lt=auj).count()
-    if len(groupe.client.nom) > 19:
-        groupe.clientname = groupe.client.nom[:15]+"..."
-    else:
-        groupe.clientname = groupe.client.nom
-    if len(groupe.nom) > 19:
-        groupe.nom = groupe.nom[:15]+"..."
-    liste.append(groupe)
+    if groupe.hier:
+        if len(groupe.client.nom) > 19:
+            groupe.clientname = groupe.client.nom[:15]+"..."
+        else:
+            groupe.clientname = groupe.client.nom
+        if len(groupe.nom) > 19:
+            groupe.nom = groupe.nom[:15]+"..."
+        liste.append(groupe)
 
 report = render_to_string('report.txt', {'liste_groupes': liste, 'hier': hier,})
 print smart_str(report)
