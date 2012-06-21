@@ -8,9 +8,9 @@ from django.conf import settings
 from django.contrib import admin
 #admin.autodiscover()
 
-import coaching.admin
-import learning.admin
-import testing.admin
+import apps.coaching.admin
+import apps.learning.admin
+import apps.testing.admin
 
 # Base
 urlpatterns = patterns('email_auth.views',
@@ -28,26 +28,26 @@ urlpatterns += patterns('django.contrib.auth.views',
 
 # Applications
 urlpatterns += patterns('',
-    (r'^$', 'dashboard.views.dashboard'),
-    (r'^learning/', include('learning.urls')),
-    (r'^testing/', include('testing.urls')),
-    (r'^coaching/', include('coaching.urls')),
+    (r'^$', 'apps.dashboard.views.dashboard'),
+    (r'^learning/', include('apps.learning.urls')),
+    (r'^testing/', include('apps.testing.urls')),
+    (r'^coaching/', include('apps.coaching.urls')),
     (r'^staff/coaching/utilisateur/create_logins/',
-        'coaching.views.create_logins'),
+        'apps.coaching.views.create_logins'),
     (r'^staff/', include(admin.site.urls)),
-    (r'^dashboard/$', 'dashboard.views.dashboard'),
-    (r'^profile/$', 'coaching.views.profile'),
+    (r'^dashboard/$', 'apps.dashboard.views.dashboard'),
+    (r'^profile/$', 'apps.coaching.views.profile'),
 )
 
 # Développement
 if settings.SITE_ID==1:
-    contents_root = os.path.join(settings.PROJECT_PATH, settings.CONTENTS_PREFIX)
-    uploads_root = os.path.join(settings.PROJECT_PATH, settings.MEDIA_ROOT)
+    contents_root = settings.LG_CONTENTS_ROOT
+    uploads_root = os.path.join(settings.LG_PROJECT_PATH, settings.MEDIA_ROOT)
     urlpatterns += patterns('',
     (r'^static/contents/(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': contents_root }),
     (r'^static/uploads/(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': uploads_root }),
     (r'^static/media/(?P<path>.*)$', 'django.views.static.serve',
-    {'document_root': os.path.join(settings.PROJECT_PATH, 'static/media') }),
+    {'document_root': os.path.join(settings.LG_PROJECT_PATH, 'static/media') }),
 )

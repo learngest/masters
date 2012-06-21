@@ -5,18 +5,21 @@ import os
 import sys
 import datetime
 
-curdir, filename = os.path.split(__file__)
-sys.path.append(os.path.abspath(os.path.join(curdir, os.pardir)))
+try:
+    import masters.settings
+except ImportError:
+    curdir, filename = os.path.split(__file__)
+    sys.path.append(os.path.abspath(os.path.join(curdir, os.pardir, os.pardir)))
+    import masters.settings
 
 from django.core.management import setup_environ
-import settings
-setup_environ(settings)
+setup_environ(masters.settings)
 
 from django.template.loader import render_to_string
 from django.utils.encoding import smart_str
 
-from coaching.models import Groupe
-from learning.models import ModuleCours
+from apps.coaching.models import Groupe
+from apps.learning.models import ModuleCours
 
 liste = []
 

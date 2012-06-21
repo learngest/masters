@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block user_infos %}
-<p><a class="user" href="{% url coaching.views.profile %}">{{ user }}</a></p>
+<p><a class="user" href="{% url apps.coaching.views.profile %}">{{ user }}</a></p>
 <p><a class="logout" href="{% url email_auth.views.logout %}">{% trans "Logout" %}</a></p>
 {% endblock %}
 
@@ -12,8 +12,8 @@
 		{% if user.is_staff %}
 		<li><a href="{% url admin:index %}" class="selected">{% trans "Administration" %}</a></li>
 		{% endif %}
-		<li><a href="{% url dashboard.views.dashboard %}">{% trans "Dashboard" %}</a></li>
-		<li><a href="{% url coaching.views.profile %}">{% trans "Profile" %}</a></li>
+		<li><a href="{% url apps.dashboard.views.dashboard %}">{% trans "Dashboard" %}</a></li>
+		<li><a href="{% url apps.coaching.views.profile %}">{% trans "Profile" %}</a></li>
 	</ul>
 </div>
 {% endblock %}

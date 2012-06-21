@@ -19,13 +19,12 @@ except ImportError:
     pass
 
 try:
-    if LOCAL_APPS_PATH:
-        sys.path.append(LOCAL_APPS_PATH)
+    if LG_LOCAL_APPS_PATH:
+        sys.path.append(LG_LOCAL_APPS_PATH)
 except NameError:
     pass
 
-PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
-PROJECT_NAME = os.path.basename(PROJECT_PATH)
+LG_PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -49,17 +48,12 @@ USE_I18N = True
 
 # Sessions
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True                                                                            
-ROOT_URLCONF = '%s.urls' % PROJECT_NAME
-
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static/uploads')
+ROOT_URLCONF = 'masters.urls'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/static/uploads/'
-WORKDONE_DIR = 'workdone'
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
@@ -69,10 +63,6 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/static/media/admin/'
-# never put a beginning / on contents prefix
-CONTENTS_PREFIX = 'static/contents'
-ALLOWED_INCLUDE_ROOTS = (os.path.join(PROJECT_PATH, CONTENTS_PREFIX),)
-
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -81,7 +71,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-        'coaching.context_processors.media_urls',
+        'apps.coaching.context_processors.media_urls',
         'django.core.context_processors.auth',
         'django.core.context_processors.debug',
         'django.core.context_processors.i18n',
@@ -100,7 +90,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_PATH, 'templates'),
+    os.path.join(LG_PROJECT_PATH, 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -110,15 +100,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'email_auth',
-    'dashboard',
-    'learning',
-    'coaching',
-    'testing',
+    'apps.dashboard',
+    'apps.learning',
+    'apps.coaching',
+    'apps.testing',
 )
 
 AUTHENTICATION_BACKENDS = (
 #    'email_auth.backends.EmailBackend',
-    'coaching.backends.Backend',
+    'apps.coaching.backends.Backend',
 )
 
 CUSTOM_USER_MODEL = 'coaching.Utilisateur'
