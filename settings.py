@@ -50,11 +50,6 @@ USE_I18N = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True                                                                            
 ROOT_URLCONF = 'masters.urls'
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/static/uploads/'
-
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/dashboard/'
